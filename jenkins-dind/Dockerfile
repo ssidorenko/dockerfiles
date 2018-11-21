@@ -18,4 +18,3 @@ RUN apt-get update && \
    apt-get update && \
    apt-get -y install docker-ce && \
    rm -rf /var/lib/apt/lists/*
-USER jenkins
