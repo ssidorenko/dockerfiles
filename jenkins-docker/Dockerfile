@@ -17,4 +17,5 @@ RUN apt-get update && \
       stable" && \
    apt-get update && \
    apt-get -y install docker-ce && \
-   rm -rf /var/lib/apt/lists/*
+   rm -rf /var/lib/apt/lists/* && \
+   curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && chmod +x /usr/local/bin/docker-compose
