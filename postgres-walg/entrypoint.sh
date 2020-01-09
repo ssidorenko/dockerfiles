@@ -8,10 +8,10 @@ if [ "$1" = 'postgres' ]; then
     echo $PGDATA/PG_VERSION does not exist
   else
     echo $PGDATA/PG_VERSION exist, ensuring wal-e is set to run
-    . ./docker-entrypoint-initdb.d/setup-wale.sh
+    . ./docker-entrypoint-initdb.d/01-setup-walg.sh
   fi
 
-  . ./docker-entrypoint.sh $1
+  /usr/local/bin/docker-entrypoint.sh $1
 fi
 
 exec "$@"
